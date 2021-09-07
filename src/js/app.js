@@ -1,6 +1,5 @@
 import { renderCountry } from './markupRendering';
 import getRefs from './refs'
-import {showErrMsg} from './services'
 const debounce = require('lodash.debounce');
 
 const { input } = getRefs();
