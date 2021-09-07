@@ -11,7 +11,6 @@ const onUserInput = (e) => {
         return;
     };
     renderCountry(userInput);
-    showErrMsg();
 };
 
 const onFocusChange = e => e.target.value = '';
