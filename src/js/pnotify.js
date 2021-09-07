@@ -1,9 +1,11 @@
-import { defaultModules, defaultStack, Stack } from '@pnotify/core';
+import { defaultModules, Stack } from '@pnotify/core';
 import '@pnotify/core/dist/PNotify.css';
 import * as PNotifyMobile from '@pnotify/mobile';
 import '@pnotify/mobile/dist/PNotifyMobile.css';
 const { defaults } = require('@pnotify/core');
-import { error } from '@pnotify/core';
+import '@pnotify/core/dist/BrightTheme.css';
+
+
 
 
 defaultModules.set(PNotifyMobile, {});
