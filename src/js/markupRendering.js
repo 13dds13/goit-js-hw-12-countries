@@ -3,9 +3,10 @@ import countryInfoMarkup from '../templates/country-markup.hbs';
 import coutriesListMarkup from '../templates/countries-markup.hbs';
 import { showErrMsg, clearSearchResults } from './services';
 import getRefs from './refs'
+import './pnotify'
+import { alert } from '@pnotify/core';
 
 const { searchResultContainer } = getRefs();
-
 
 export const renderCountry = (countryName) => {
     fetchCountries(countryName)
@@ -22,7 +23,7 @@ export const renderCountry = (countryName) => {
             if (length >= 2 && res.length <= 10) {
                 addMarkup(coutriesListMarkup(res));
             };
-        }).catch(msgType => showErrMsg(msgType));
+        }).catch(msgType => alert(showErrMsg(msgType)));
 };
 
 const addMarkup = markup => {
